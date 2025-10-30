@@ -550,7 +550,7 @@ string Nussinov::find_bp(int a, int b, int i, int j, int x, int y, int seq) {
     return "FAIL";
 }
 
-void Nussinov::lambda_swipe(double incr, ostream &fout, string outfile) {
+void Nussinov::lambda_sweep(double incr, ostream &fout, string outfile) {
     int size = ceil(1/incr + 1);
     cout << "size: " << size << endl;
     vector<double> lambda_buffer(size, 0);

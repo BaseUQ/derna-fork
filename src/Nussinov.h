@@ -26,7 +26,7 @@ public:
     tuple<double, string, string> nussinov (ostream& fout);
     string get_rna();
     string find_bp(int a, int b, int i, int j, int x, int y, int seq);
-    void lambda_swipe(double incr, ostream& fout, string outfile);
+    void lambda_sweep(double incr, ostream& fout, string outfile);
     tuple<double, string> nussinov_CAI(double lambda, ostream& fout);
     string nussinov_CAI_tb(int a, int b, int i, int j, int x, int y, double lambda);
     inline double & Access(int a, int b, int i, int j, int x, int y);

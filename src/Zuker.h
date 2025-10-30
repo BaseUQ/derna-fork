@@ -201,7 +201,7 @@ public:
      * @param fout ostream object for stdout
      * @param outfile output file to save swipe data, csv format
      */
-    void lambda_swipe(double incr, ostream& fout, string & outfile);
+    void lambda_sweep(double incr, ostream& fout, string & outfile);
 
     /**
      * Lambda swipe until finding points p,q where p.MFE = q.MFE and p.CAI = q.CAI
@@ -209,9 +209,9 @@ public:
      * @param fout
      * @param outfile
      */
-    void lambda_swipe_2(double, double, ostream& fout, string & outfile);
+    void lambda_sweep_2(double, double, ostream& fout, string & outfile);
 
-    void lambda_swipe_3(double, double, ostream& fout, string & outfile);
+    void lambda_sweep_3(double, double, ostream& fout, string & outfile);
 
     /**
      * Access vector Z given protein position, codon selection and codon index (a, b, i, j, x, y)

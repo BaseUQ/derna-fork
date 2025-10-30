@@ -16,6 +16,7 @@
 #include <queue>
 #include <cassert>
 #include <algorithm>
+#include <sstream>
 #include "params/constants.h"
 
 using namespace std;
@@ -4150,25 +4151,25 @@ vector<tuple<int, double, double, double, vector<int>>> Zuker::build_OB_options(
                                // No need for vector<int>
                            });
 
-    if (it == options.end()) {
-        cout << "OB, a: " << a << ", b: " << b << ", i: " << i << ", j: " << j << ", x: " << x << ", y: " << y << ", en: " << OB[idx] << endl;
-        cerr << "ERROR: opt was not found in options!" << std::endl;
-
-        std::cerr << "opt = ("
-                  << std::get<0>(opt) << ", "
-                  << std::get<1>(opt) << ", "
-                  << std::get<2>(opt) << ", "
-                  << std::get<3>(opt) << ", vector = [";
-
-        const vector<int>& v = std::get<4>(opt);
-        for (size_t i = 0; i < v.size(); ++i) {
-            std::cerr << v[i];
-            if (i + 1 < v.size()) std::cerr << ", ";
-        }
-        std::cerr << "])" << std::endl;
-        cerr << O[index(0, n - 1, 0, 2, minX, minY)] << endl;
-        assert(false); // force failure
-    }
+//    if (it == options.end()) {
+//        cout << "OB, a: " << a << ", b: " << b << ", i: " << i << ", j: " << j << ", x: " << x << ", y: " << y << ", en: " << OB[idx] << endl;
+//        cerr << "ERROR: opt was not found in options!" << std::endl;
+//
+//        std::cerr << "opt = ("
+//                  << std::get<0>(opt) << ", "
+//                  << std::get<1>(opt) << ", "
+//                  << std::get<2>(opt) << ", "
+//                  << std::get<3>(opt) << ", vector = [";
+//
+//        const vector<int>& v = std::get<4>(opt);
+//        for (size_t i = 0; i < v.size(); ++i) {
+//            std::cerr << v[i];
+//            if (i + 1 < v.size()) std::cerr << ", ";
+//        }
+//        std::cerr << "])" << std::endl;
+//        cerr << O[index(0, n - 1, 0, 2, minX, minY)] << endl;
+//        assert(false); // force failure
+//    }
 
 //    if (options.empty()) {
 //        options.emplace_back(opt);
@@ -4353,24 +4354,24 @@ vector<tuple<int, double, double, double, vector<int>>> Zuker::build_MB_options(
                                // No need for vector<int>
                            });
 
-    if (it == options.end()) {
-        cout << "MB, a: " << a << ", b: " << b << ", i: " << i << ", j: " << j << ", x: " << x << ", y: " << y << ", en: " << MB[idx] << endl;
-        cerr << "ERROR: opt was not found in options!" << std::endl;
-        std::cerr << "opt = ("
-                  << std::get<0>(opt) << ", "
-                  << std::get<1>(opt) << ", "
-                  << std::get<2>(opt) << ", "
-                  << std::get<3>(opt) << ", vector = [";
-
-        const vector<int>& v = std::get<4>(opt);
-        for (size_t i = 0; i < v.size(); ++i) {
-            std::cerr << v[i];
-            if (i + 1 < v.size()) std::cerr << ", ";
-        }
-        std::cerr << "])" << std::endl;
-        // You can also print the opt values here if needed
-        assert(false); // force failure
-    }
+//    if (it == options.end()) {
+//        cout << "MB, a: " << a << ", b: " << b << ", i: " << i << ", j: " << j << ", x: " << x << ", y: " << y << ", en: " << MB[idx] << endl;
+//        cerr << "ERROR: opt was not found in options!" << std::endl;
+//        std::cerr << "opt = ("
+//                  << std::get<0>(opt) << ", "
+//                  << std::get<1>(opt) << ", "
+//                  << std::get<2>(opt) << ", "
+//                  << std::get<3>(opt) << ", vector = [";
+//
+//        const vector<int>& v = std::get<4>(opt);
+//        for (size_t i = 0; i < v.size(); ++i) {
+//            std::cerr << v[i];
+//            if (i + 1 < v.size()) std::cerr << ", ";
+//        }
+//        std::cerr << "])" << std::endl;
+//        // You can also print the opt values here if needed
+//        assert(false); // force failure
+//    }
 
     std::set<OptionKey> seen;
     std::vector<tuple<int, double, double, double, vector<int>>> deduped_options;
@@ -5350,24 +5351,24 @@ vector<tuple<int, double, double, double, vector<int>>> Zuker::build_EB_options(
                                // No need for vector<int>
                            });
 
-    if (it == options.end()) {
-        cout << "EB, a: " << a << ", b: " << b << ", i: " << i << ", j: " << j << ", x: " << x << ", y: " << y << endl;
-        std::cerr << "ERROR: opt was not found in options!" << std::endl;
-        std::cerr << "opt = ("
-                  << std::get<0>(opt) << ", "
-                  << std::get<1>(opt) << ", "
-                  << std::get<2>(opt) << ", "
-                  << std::get<3>(opt) << ", vector = [";
-
-        const vector<int>& v = std::get<4>(opt);
-        for (size_t i = 0; i < v.size(); ++i) {
-            std::cerr << v[i];
-            if (i + 1 < v.size()) std::cerr << ", ";
-        }
-        std::cerr << "])" << std::endl;
-        // You can also print the opt values here if needed
-        assert(false); // force failure
-    }
+//    if (it == options.end()) {
+//        cout << "EB, a: " << a << ", b: " << b << ", i: " << i << ", j: " << j << ", x: " << x << ", y: " << y << endl;
+//        std::cerr << "ERROR: opt was not found in options!" << std::endl;
+//        std::cerr << "opt = ("
+//                  << std::get<0>(opt) << ", "
+//                  << std::get<1>(opt) << ", "
+//                  << std::get<2>(opt) << ", "
+//                  << std::get<3>(opt) << ", vector = [";
+//
+//        const vector<int>& v = std::get<4>(opt);
+//        for (size_t i = 0; i < v.size(); ++i) {
+//            std::cerr << v[i];
+//            if (i + 1 < v.size()) std::cerr << ", ";
+//        }
+//        std::cerr << "])" << std::endl;
+//        // You can also print the opt values here if needed
+//        assert(false); // force failure
+//    }
 
 //    if (options.empty()) {
 //        options.emplace_back(opt);
@@ -6991,7 +6992,7 @@ void Zuker::calculate_CAI_M(int a, int b, int i, int j, int x, int y, double lam
 
 }
 
-void Zuker::lambda_swipe(double incr, std::ostream &fout, std::string &outfile) {
+void Zuker::lambda_sweep(double incr, std::ostream &fout, std::string &outfile) {
     // Open CSV and write header.
     std::ofstream csv_fout(outfile + ".csv");
     // Columns: lambda, O (objective term from calculate_CAI_O), rc_* metrics, and seq/structure
@@ -7057,32 +7058,49 @@ void Zuker::lambda_swipe(double incr, std::ostream &fout, std::string &outfile) 
     std::cout << "swipe done, CSV written to " << outfile << ".csv" << std::endl;
 }
 
-void Zuker::lambda_swipe_2(double threshold, double threshold2, std::ostream &fout, std::string &outfile) {
+
+void Zuker::lambda_sweep_2(double threshold, double threshold2, std::ostream &fout, std::string &outfile) {
     std::ofstream csv_fout(outfile + ".csv");
-    csv_fout << "lambda,rc_mfe,rc_CAI,rc_sCAI,rc_seq,rc_bp,sub_mfe,sub_CAI,sub_sCAI,sub_seq,sub_bp\n";
+    // Add "gamma" so each suboptimal sample is identifiable
+    // sCAI, mfe, seq, bp
+    csv_fout << "lambda,gamma,mfe,CAI,sCAI,seq,bp,"
+             << "sub_mfe,sub_CAI,sub_sCAI,sub_seq,sub_bp\n";
 
     std::unordered_set<double> processed_lambdas;
     std::unordered_map<double, LambdaResult> lambda_results;
+
+    auto write_row = [&](std::ofstream &csv,
+                         double lambda_value,
+                         const std::string &gamma_str, // "None" for base, or numeric string for subopt
+                         double rc_mfe, double rc_CAI, double rc_sCAI,
+                         const std::string &rc_seq, const std::string &rc_bp,
+                         double sub_mfe, double sub_CAI, double sub_sCAI,
+                         const std::string &sub_seq, const std::string &sub_bp) {
+        csv << lambda_value << ","
+            << gamma_str    << ","
+            << rc_mfe       << ","
+            << rc_CAI       << ","
+            << rc_sCAI      << ","
+            << rc_seq       << ","
+            << rc_bp        << ","
+            << sub_mfe      << ","
+            << sub_CAI      << ","
+            << sub_sCAI     << ","
+            << sub_seq      << ","
+            << sub_bp       << "\n";
+    };
 
     auto process_lambda = [&](double lambda_value,
                               std::ofstream &csv_fout,
                               std::ostream &fout) -> LambdaResult
     {
-        // main (rc_*) outputs
+        // ===== Main (rc_*) solution =====
         std::string rna(3*n, '.'), bp(3*n, '.');
-        double CAI_value = 0.0;   // rc_CAI
-        double sCAI_value = 0.0;  // rc_sCAI
-        double mfe_value = 0.0;   // rc_mfe
+        double rc_CAI  = 0.0;  // scaled CAI
+        double rc_sCAI = 0.0;  // standard CAI
+        double rc_mfe  = 0.0;
+        double O_val   = 0.0;
 
-        // suboptimal (sub_*) defaults: NaN for numeric, "None" for strings
-        std::string rna_sub = "None", bp_sub = "None";
-        double sub_mfe  = std::numeric_limits<double>::quiet_NaN();
-        double sub_CAI  = std::numeric_limits<double>::quiet_NaN();
-        double sub_sCAI = std::numeric_limits<double>::quiet_NaN();
-
-        double O_val = 0.0;
-
-        // Always recompute DP
         reinit();
         fout << "lambda: " << lambda_value << std::endl;
         O_val = calculate_CAI_O(fout, lambda_value);
@@ -7091,68 +7109,84 @@ void Zuker::lambda_swipe_2(double threshold, double threshold2, std::ostream &fo
         get_rna_cai(rna);
         get_bp(bp);
 
-        // Evaluate main solution
-        CAI_value = evaluate_CAI(rna, protein, /*scaled?*/ 1);  // rc_CAI
-        sCAI_value = evaluate_CAI(rna, protein, /*scaled?*/ 0); // rc_sCAI
-        mfe_value = evaluate_MFE(rna);                          // rc_mfe
+        rc_CAI  = evaluate_CAI(rna, protein, 1);
+        rc_sCAI = evaluate_CAI(rna, protein, 0);
+        rc_mfe  = evaluate_MFE(rna);
 
-        fout << "rna: " << rna << std::endl;
-        fout << "bp: " << bp << std::endl;
+        fout << "seq: " << rna << std::endl;
+        fout << "bp: "  << bp  << std::endl;
 
-        std::cout << "lambda: " << lambda_value
-                  << ",O: " << O_val
-                  << ",CAI: " << CAI_value
-                  << ",sCAI: " << sCAI_value
-                  << ",MFE: " << mfe_value
-                  << ",combined: " << (lambda_value * mfe_value + (lambda_value - 1) * CAI_value)
+        std::cout << "lambda: "   << lambda_value
+                  << ",O: "       << O_val
+                  << ",CAI: "     << rc_CAI
+                  << ",sCAI: "    << rc_sCAI
+                  << ",MFE: "     << rc_mfe
+                  << ",combined: "<< (lambda_value * rc_mfe + (lambda_value - 1) * rc_CAI)
                   << std::endl;
 
-        // -------- Optional suboptimal block --------
-        // If you later want suboptimal outputs, uncomment and fill rna_sub/bp_sub and metrics.
-        /*
-        try {
-            std::mt19937 rng(42);
-            traceback_suboptimal(lambda_value, 0.95, rng);
+        // --- Base row (no suboptimal): sub fields = NaN / "None" ---
+        write_row(csv_fout, lambda_value, "None",
+                  rc_mfe, rc_CAI, rc_sCAI,
+                  rna, bp,
+                  std::numeric_limits<double>::quiet_NaN(),
+                  std::numeric_limits<double>::quiet_NaN(),
+                  std::numeric_limits<double>::quiet_NaN(),
+                  "None", "None");
 
-            rna_sub.assign(3*n, '.');
-            bp_sub.assign(3*n, '.');
-            get_rna_cai(rna_sub);
-            get_bp(bp_sub);
+        // ===== Suboptimal sweep over gamma ∈ {0.50, 0.55, ..., 0.95} =====
+        // If you want a different set/step, edit this vector generation.
+        bool subopt = false;
+        if (subopt) {
+            for (int i = 0; i <= 9; ++i) {
+                        double gamma = 0.50 + 0.05 * i; // 0.50, 0.55, ..., 0.95
 
-            sub_CAI  = evaluate_CAI(rna_sub, protein, 1); // sub_CAI
-            sub_sCAI = evaluate_CAI(rna_sub, protein, 0); // sub_sCAI
-            sub_mfe  = evaluate_MFE(rna_sub);             // sub_mfe
+                        // Defaults for failure cases
+                        std::string rna_sub = "None", bp_sub = "None";
+                        double sub_mfe  = std::numeric_limits<double>::quiet_NaN();
+                        double sub_CAI  = std::numeric_limits<double>::quiet_NaN();
+                        double sub_sCAI = std::numeric_limits<double>::quiet_NaN();
 
-            fout << "subopt rna: " << rna_sub << std::endl;
-            fout << "subopt bp: " << bp_sub << std::endl;
-        } catch (const std::exception& e) {
-            rna_sub = "None";
-            bp_sub  = "None";
-            sub_mfe = std::numeric_limits<double>::quiet_NaN();
-            sub_CAI = std::numeric_limits<double>::quiet_NaN();
-            sub_sCAI = std::numeric_limits<double>::quiet_NaN();
-            std::cerr << "Error during suboptimal traceback: " << e.what() << std::endl;
+                        try {
+                            // You can change the RNG seeding policy if you want determinism per (lambda, gamma)
+                            std::mt19937 rng(42u ^ static_cast<uint32_t>(std::llround(lambda_value * 1e6)) ^ static_cast<uint32_t>(std::llround(gamma * 100.0)));
+
+                            // Run suboptimal traceback at this gamma
+                            traceback_suboptimal(lambda_value, gamma, rng);
+
+                            rna_sub.assign(3*n, '.');
+                            bp_sub.assign(3*n, '.');
+                            get_rna_cai(rna_sub);
+                            get_bp(bp_sub);
+
+                            sub_CAI  = evaluate_CAI(rna_sub, protein, 1);
+                            sub_sCAI = evaluate_CAI(rna_sub, protein, 0);
+                            sub_mfe  = evaluate_MFE(rna_sub);
+
+                            fout << "subopt (gamma=" << gamma << ") rna: " << rna_sub << std::endl;
+                            fout << "subopt (gamma=" << gamma << ") bp: "  << bp_sub  << std::endl;
+                        } catch (const std::exception& e) {
+                            // Keep defaults, but log the error
+                            std::cerr << "Suboptimal traceback failed (lambda=" << lambda_value
+                                      << ", gamma=" << gamma << "): " << e.what() << std::endl;
+                        }
+
+                        // Write suboptimal row for this gamma
+                        std::ostringstream gss;
+                        gss.setf(std::ios::fixed); gss.precision(2);
+                        gss << gamma;
+
+                        write_row(csv_fout, lambda_value, gss.str(),
+                                  rc_mfe, rc_CAI, rc_sCAI,
+                                  rna, bp,
+                                  sub_mfe, sub_CAI, sub_sCAI,
+                                  rna_sub, bp_sub);
+                    }
         }
-        */
-
-        // ---- Write CSV row ----
-        // Note: NaN doubles will be written as "nan" by the stream.
-        csv_fout << lambda_value << ","
-                 << mfe_value   << ","
-                 << CAI_value   << ","
-                 << sCAI_value  << ","
-                 << rna         << ","
-                 << bp          << ","
-                 << sub_mfe     << ","
-                 << sub_CAI     << ","
-                 << sub_sCAI    << ","
-                 << rna_sub     << ","
-                 << bp_sub      << "\n";
-
-        return LambdaResult{mfe_value, sCAI_value, CAI_value, O_val};
+        // Return main metrics for refinement logic
+        return LambdaResult{rc_mfe, rc_sCAI, rc_CAI, O_val};
     };
 
-    // ---- main body ----
+    // ---- main body (unchanged refinement queue) ----
     double left_lambda = 0.0, right_lambda = 0.0;
     std::queue<std::pair<double, double>> lambda;
     lambda.emplace(EPSILON, 1 - EPSILON);
@@ -7164,7 +7198,6 @@ void Zuker::lambda_swipe_2(double threshold, double threshold2, std::ostream &fo
 
         LambdaResult left_res, right_res;
 
-        // Process left_lambda
         if (processed_lambdas.count(left_lambda) == 0) {
             left_res = process_lambda(left_lambda, csv_fout, fout);
             processed_lambdas.insert(left_lambda);
@@ -7173,7 +7206,6 @@ void Zuker::lambda_swipe_2(double threshold, double threshold2, std::ostream &fo
             left_res = lambda_results[left_lambda];
         }
 
-        // Process right_lambda
         if (processed_lambdas.count(right_lambda) == 0) {
             right_res = process_lambda(right_lambda, csv_fout, fout);
             processed_lambdas.insert(right_lambda);
@@ -7182,7 +7214,6 @@ void Zuker::lambda_swipe_2(double threshold, double threshold2, std::ostream &fo
             right_res = lambda_results[right_lambda];
         }
 
-        // Compare and refine
         if (!compare(left_res.cai_value, right_res.cai_value) &&
             !compare(left_res.mfe_value, right_res.mfe_value)) {
 
@@ -7200,136 +7231,7 @@ void Zuker::lambda_swipe_2(double threshold, double threshold2, std::ostream &fo
     std::cout << "swipe done, CSV written to " << outfile << ".csv" << std::endl;
 }
 
-//void Zuker::lambda_swipe_2(double threshold, double threshold2, ostream &fout, string &outfile) {
-//    ofstream csv_fout(outfile + ".csv");
-//    csv_fout << "lambda,rc_mfe,rc_CAI,rc_sCAI,sub_mfe,sub_CAI,sub_sCAI\n";
-//
-//    unordered_set<double> processed_lambdas;
-//    unordered_map<double, LambdaResult> lambda_results;
-//
-//    auto process_lambda = [&](double lambda_value,
-//                              ofstream &csv_fout,
-//                              ostream &fout) -> LambdaResult
-//    {
-//        string rna(3*n, '.'), bp(3*n, '.'), rna_sub(3*n, '.'), bp_sub(3*n, '.');
-//        double cai_value_sub = 0, mfe_value_sub = 0;
-//        double O_val = 0;
-//        double CAI_value = 0, cai_value = 0, mfe_value = 0;
-//
-//        // Always recompute DP
-//        reinit();
-//        fout << "lambda: " << lambda_value << endl;
-//        O_val = calculate_CAI_O(fout, lambda_value);
-//        traceback_B2(lambda_value);
-//        get_rna_cai(rna);
-//        get_bp(bp);
-//
-//        CAI_value = evaluate_CAI(rna, protein, 1);
-//        cai_value = evaluate_CAI(rna, protein, 0);
-//        mfe_value = evaluate_MFE(rna);
-//
-//        fout << "rna: " << rna << endl;
-//        fout << "bp: " << bp << endl;
-//
-//        cout << "lambda: " << lambda_value
-//             << ",O: " << O_val
-//             << ",CAI: " << CAI_value
-//             << ",sCAI: " << cai_value
-//             << ",MFE: " << mfe_value
-//             << ",combined: " << lambda_value * mfe_value + (lambda_value - 1) * CAI_value << endl;
-//
-////        // Suboptimal
-////        try {
-////            mt19937 rng(42);
-////            cout << "subopt lambda: " << lambda_value << endl;
-////            traceback_suboptimal(lambda_value, 0.95, rng);
-////            get_rna_cai(rna_sub);
-////            get_bp(bp_sub);
-////
-////            cai_value_sub = evaluate_CAI(rna_sub);
-////            mfe_value_sub = evaluate_MFE(rna_sub);
-////
-////            fout << "subopt rna: " << rna_sub << endl;
-////            fout << "subopt bp: " << bp_sub << endl;
-////
-////            cout << "subopt lambda: " << lambda_value
-////                 << ",O: " << O_val
-////                 << ",CAI: " << CAI_value
-////                 << ",sCAI: " << cai_value_sub
-////                 << ",MFE: " << mfe_value_sub
-////                 << ",combined: " << lambda_value * mfe_value_sub + (lambda_value - 1) * CAI_value << endl;
-////        } catch (const exception& e) {
-////            mfe_value_sub = 0.0;
-////            cai_value_sub = 0.0;
-////            cerr << "Error during suboptimal traceback: " << e.what() << endl;
-////        }
-//
-//        // CSV row
-//        csv_fout << lambda_value << ","
-//                 << mfe_value << ","
-//                 << CAI_value << ","
-//                 << cai_value << ","
-//                 << mfe_value_sub << ","
-//                 << CAI_value << ","  // reuse CAI_value unless you compute CAI_value_sub separately
-//                 << cai_value_sub << "\n";
-//
-//        // Return results
-//        return LambdaResult{mfe_value, cai_value, CAI_value, O_val};
-//    };
-//
-//    // ---- main body ----
-//    double left_lambda, right_lambda;
-//    queue<pair<double, double>> lambda;
-//    lambda.emplace(EPSILON, 1-EPSILON);
-//
-//    while (!lambda.empty()) {
-//        left_lambda  = lambda.front().first;
-//        right_lambda = lambda.front().second;
-//        lambda.pop();
-//
-//        LambdaResult left_res, right_res;
-//
-//        // Process left_lambda
-//        if (processed_lambdas.count(left_lambda) == 0) {
-//            left_res = process_lambda(left_lambda, csv_fout, fout);
-//            processed_lambdas.insert(left_lambda);
-//            lambda_results[left_lambda] = left_res;
-//        } else {
-////            cout << "Skipping already processed lambda: " << left_lambda << endl;
-//            left_res = lambda_results[left_lambda];
-//        }
-//
-//        // Process right_lambda
-//        if (processed_lambdas.count(right_lambda) == 0) {
-//            right_res = process_lambda(right_lambda, csv_fout, fout);
-//            processed_lambdas.insert(right_lambda);
-//            lambda_results[right_lambda] = right_res;
-//        } else {
-////            cout << "Skipping already processed lambda: " << right_lambda << endl;
-//            right_res = lambda_results[right_lambda];
-//        }
-//
-//        // Compare and refine
-//        if (!compare(left_res.cai_value, right_res.cai_value) &&
-//            !compare(left_res.mfe_value, right_res.mfe_value)) {
-//
-////            cout << "lambda diff: " << right_lambda - left_lambda << endl;
-//
-//            double threshold_to_use = (right_lambda < threshold) ? threshold2 : threshold;
-//            if (!compare(left_lambda, right_lambda, threshold_to_use)) {
-//                double m = (left_lambda + right_lambda) / 2;
-//                lambda.emplace(left_lambda, m);
-//                lambda.emplace(m, right_lambda);
-//            }
-//        }
-//    }
-//
-//    cout << "lambda queue size: " << lambda.size() << endl;
-//    fout << "Final left lambda: " << left_lambda << ", right lambda: " << right_lambda << endl;
-//    cout << "swipe done, CSV written to " << outfile << ".csv" << endl;
-//}
-
-void Zuker::lambda_swipe_3(double threshold, double threshold2, ostream &fout, string & outfile) {
+void Zuker::lambda_sweep_3(double threshold, double threshold2, ostream &fout, string & outfile) {
     double left_lambda;
     double right_lambda;
     vector<double> O_buffer,lambda_buffer,F_buffer,CAI_buffer,stand_CAI;

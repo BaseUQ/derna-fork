@@ -137,8 +137,8 @@ int main(int argc, char *argv[]) {
 
     bool mfe = false;
     bool mfe_cai = false;
-    bool lambda_swipe = false;
-    bool lambda_swipe2 = false;
+    bool lambda_sweep = false;
+    bool lambda_sweep2 = false;
     switch (mode) {
         case 1:
             mfe = true;
@@ -147,10 +147,10 @@ int main(int argc, char *argv[]) {
             mfe_cai = true;
             break;
         case 3:
-            lambda_swipe = true;
+            lambda_sweep = true;
             break;
         case 4:
-            lambda_swipe2 = true;
+            lambda_sweep2 = true;
             break;
         default:
             throw invalid_argument("Invalid Input for Mode");
@@ -192,9 +192,9 @@ int main(int argc, char *argv[]) {
         fout << "nussinov: " << bp << endl;
     }
 
-    if (nussinov && lambda_swipe) {
+    if (nussinov && lambda_sweep) {
         Nussinov N = Nussinov(protein, n, g);
-        N.lambda_swipe(incr,fout, swipe_output);
+        N.lambda_sweep(incr,fout, swipe_output);
     }
 
 
@@ -378,16 +378,16 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    if (zuker && lambda_swipe) {
+    if (zuker && lambda_sweep) {
         Zuker Z = Zuker(n,mode,protein);
-        Z.lambda_swipe_2(threshold,threshold2, fout,swipe_output);
+        Z.lambda_sweep_2(threshold,threshold2, fout,swipe_output);
     }
 
-    if (zuker && lambda_swipe2) {
+    if (zuker && lambda_sweep2) {
         if (lambda == inf) throw invalid_argument("Invalid Value of lambda");
         if (incr == inf) throw invalid_argument("Invalid increment");
         Zuker Z = Zuker(n,mode,protein);
-        Z.lambda_swipe(incr,fout,swipe_output);
+        Z.lambda_sweep(incr,fout,swipe_output);
     }
 
     return 0;
