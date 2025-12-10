@@ -5,6 +5,23 @@
 DERNA is a tool that enables the design of RNA sequences based on protein sequences. 
 DERNA accepts a protein sequence as input and provides a collection of Pareto optimal solutions consisting of RNA sequences that optimize both minimum free energy and codon adaptation index (CAI). Additionally, DERNA can function as a tool for predicting RNA structures and calculating CAI for given RNA sequences.
 
+If you find this tool useful in your research, please cite the following paper:
+
+```bibtex
+@article{gu2024derna,
+  title={DERNA enables pareto optimal RNA design},
+  author={Gu, Xinyu and Qi, Yuanyuan and El-Kebir, Mohammed},
+  journal={Journal of Computational Biology},
+  volume={31},
+  number={3},
+  pages={179--196},
+  year={2024},
+  publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…},
+  doi={10.1089/cmb.2023.0283},
+  url={https://doi.org/10.1089/cmb.2023.0283}
+}
+```
+
 ## Contents
 
 1. [Installation](#install)
